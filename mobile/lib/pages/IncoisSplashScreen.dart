@@ -42,8 +42,8 @@ class _IncoisSplashScreenState extends State<IncoisSplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    const Color primaryColor = Color(0xFF1E607E);
-
+    // const Color primaryColor = Color(0xFF1E607E);
+    const Color primaryColor = Color.fromARGB(255, 87, 202, 255);
     return const Scaffold(
       backgroundColor: primaryColor,
       body: Center(
@@ -63,7 +63,7 @@ class _IncoisSplashScreenState extends State<IncoisSplashScreen> {
             ),
             SizedBox(height: 8.0),
             Text(
-              'Your Eyes on the Coast',
+              'Stay connected with Incois org ',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 16.0,

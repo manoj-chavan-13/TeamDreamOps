@@ -36,7 +36,7 @@ class _MainNavigatorState extends State<MainNavigator> {
 
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: const Color.fromARGB(255, 3, 44, 79),
+        selectedItemColor: const Color.fromARGB(255, 92, 185, 255),
         unselectedItemColor: Colors.grey,
         showUnselectedLabels: true,
         backgroundColor: Colors.white,

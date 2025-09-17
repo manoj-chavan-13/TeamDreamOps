@@ -1,5 +1,3 @@
-// lib/screens/profile/widgets/profile_header.dart
-
 import 'package:flutter/material.dart';
 
 class ProfileHeader extends StatelessWidget {
@@ -12,7 +10,6 @@ class ProfileHeader extends StatelessWidget {
     required this.userRole,
   });
 
-  // A helper to get the initials from the name
   String getInitials(String name) {
     List<String> names = name.split(" ");
     String initials = "";
@@ -48,7 +45,7 @@ class ProfileHeader extends StatelessWidget {
             radius: 45,
             backgroundColor: const Color(0xFF63A4FF),
             child: Text(
-              getInitials(userName), // Use dynamic initials
+              getInitials(userName),
               style: const TextStyle(
                 fontSize: 32,
                 color: Colors.white,
@@ -58,18 +55,18 @@ class ProfileHeader extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           Text(
-            userName, // Use variable for name
+            userName,
             style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 8),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
             decoration: BoxDecoration(
-              color: const Color(0xFF00695C),
+              color: const Color.fromARGB(255, 66, 182, 255),
               borderRadius: BorderRadius.circular(20),
             ),
             child: Text(
-              userRole, // Use variable for role
+              userRole,
               style: const TextStyle(color: Colors.white, fontSize: 14),
             ),
           ),

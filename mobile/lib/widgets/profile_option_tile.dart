@@ -1,5 +1,3 @@
-// lib/screens/profile/widgets/profile_option_tile.dart
-
 import 'package:flutter/material.dart';
 
 class ProfileOptionTile extends StatelessWidget {
@@ -27,7 +25,6 @@ class ProfileOptionTile extends StatelessWidget {
           color: Colors.grey,
         ),
         onTap: () {
-          // Handle navigation or action
           print('$title tapped');
         },
       ),

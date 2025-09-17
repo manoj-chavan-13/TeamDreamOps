@@ -24,20 +24,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 
   Future<void> logout(BuildContext context) async {
-    // 1. Get an instance of SharedPreferences.
     final SharedPreferences prefs = await SharedPreferences.getInstance();
 
-    // 2. Set the 'isLoggedIn' flag to false.
     await prefs.setBool('isLoggedIn', false);
 
-    // It's good practice to check if the widget is still mounted before using its context.
     if (!context.mounted) return;
 
-    // 3. Navigate to the LoginScreen and remove all previous routes from the stack.
     Navigator.pushAndRemoveUntil(
       context,
       MaterialPageRoute(builder: (context) => const LoginScreen()),
-      (Route<dynamic> route) => false, // This predicate removes all routes.
+      (Route<dynamic> route) => false,
     );
   }
 
