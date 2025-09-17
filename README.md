@@ -1,4 +1,4 @@
-# SIH-2025: Coastal Hazard Reporting System
+# SIH-2025: Coastal Hazard Reporting System TeamDreamOps
 
 A comprehensive full-stack application for reporting and managing coastal hazards, built for Smart India Hackathon 2025. This system enables users to report various coastal hazards like tsunamis, oil spills, coastal erosion, and more, with real-time tracking and management capabilities.
 
