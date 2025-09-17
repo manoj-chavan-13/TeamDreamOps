@@ -17,15 +17,15 @@ const LoginPage = ({ onLogin }) => {
       ...prev,
       [name]: value
     }));
-    if (error) setError('')
-     
+    if (error) setError('');
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError('');
 
     try {
-
       const response = await fetch('http://localhost:5000/api/auth/login', {
         method: 'POST',
         headers: {
@@ -38,24 +38,23 @@ const LoginPage = ({ onLogin }) => {
         }),
         credentials: 'include'
       });
-    
 
-    const data = await response.json();
+      const data = await response.json();
 
       if (!response.ok) {
         throw new Error(data.message || 'Login failed');
       }
 
-      // Store auth data currently in localStorage
+      // Store auth data
       localStorage.setItem('authToken', data.token);
       localStorage.setItem('userData', JSON.stringify(data.user));
-
-            // Call parent callback if provided
+      
+      // Call parent callback if provided
       if (onLogin) {
         onLogin(data.user);
       }
       
-      // Navigatating to home page after successful login
+      // Navigate to home/dashboard
       navigate('/');
       
     } catch (error) {
@@ -64,10 +63,8 @@ const LoginPage = ({ onLogin }) => {
       setLoading(false);
     }
   };
-      
 
-
-   return (
+  return (
     <div className="flex min-h-screen">
       {/* Left side - Ocean themed background with content */}
       <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-r from-blue-600 to-blue-400 p-12 flex-col justify-between">
@@ -150,8 +147,7 @@ const LoginPage = ({ onLogin }) => {
               </div>
             )}
 
-
-<form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+          <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
             <div className="space-y-5">
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email address</label>
@@ -206,8 +202,7 @@ const LoginPage = ({ onLogin }) => {
                     {showPassword ? (
                       <svg className="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M3.707 2.293a1 1 0 00-1.414 1.414l14 14a1 1 0 001.414-1.414l-1.473-1.473A10.014 10.014 0 0019.542 10C18.268 5.943 14.478 3 10 3a9.958 9.958 0 00-4.512 1.074l-1.78-1.781zm4.261 4.26l1.514 1.515a2.003 2.003 0 012.45 2.45l1.514 1.514a4 4 0 00-5.478-5.478z" clipRule="evenodd" />
-                        <path d="M12.454 16.697L9.75 13.9
-                        92a4 4 0 01-3.742-3.741L2.335 6.578A9.98 9.98 0 00.458 10c1.274 4.057 5.065 7 9.542 7 .847 0 1.669-.105 2.454-.303z" />
+                        <path d="M12.454 16.697L9.75 13.992a4 4 0 01-3.742-3.741L2.335 6.578A9.98 9.98 0 00.458 10c1.274 4.057 5.065 7 9.542 7 .847 0 1.669-.105 2.454-.303z" />
                       </svg>
                     ) : (
                       <svg className="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -255,223 +250,5 @@ const LoginPage = ({ onLogin }) => {
     </div>
   );
 };
-}
 
 export default LoginPage;
-
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
