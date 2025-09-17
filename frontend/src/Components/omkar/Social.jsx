@@ -90,6 +90,7 @@ const mockTweets = [
   }
 ];
 
+
 const mockNews = [
   {
     id: 1,
