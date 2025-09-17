@@ -26,7 +26,7 @@ const mockTweets = [
     handle: 'Chennai Port Trust',
     time: '4h',
     verified: true,
-    content: '⚠ High tide warning for Chennai coast. Expected height: 2.5m at 18:30 IST. All fishing vessels advised to return to harbor immediately. #HighTide #ChennaiCoast #FishingSafety',
+    content: '⚠️ High tide warning for Chennai coast. Expected height: 2.5m at 18:30 IST. All fishing vessels advised to return to harbor immediately. #HighTide #ChennaiCoast #FishingSafety',
     hashtags: ['#HighTide', '#ChennaiCoast', '#FishingSafety'],
     likes: 567,
     retweets: 423,
@@ -77,7 +77,7 @@ const mockTweets = [
     handle: 'Puri Beach Safety',
     time: '12h',
     verified: true,
-    content: '🏖 Beach erosion accelerating near Puri temple. Approximately 15 meters of coastline lost in past 48 hours. Immediate intervention required. #CoastalErosion #PuriBeach #Heritage',
+    content: '🏖️ Beach erosion accelerating near Puri temple. Approximately 15 meters of coastline lost in past 48 hours. Immediate intervention required. #CoastalErosion #PuriBeach #Heritage',
     hashtags: ['#CoastalErosion', '#PuriBeach', '#Heritage'],
     likes: 445,
     retweets: 289,
@@ -89,7 +89,6 @@ const mockTweets = [
     engagement: 801
   }
 ];
-
 
 const mockNews = [
   {
@@ -188,7 +187,7 @@ export default function Social() {
                 {hazardTypes.map(type => (
                   <button
                     key={type}
-                    className={filter-btn ${activeFilter === type ? 'active' : ''}}
+                    className={`filter-btn ${activeFilter === type ? 'active' : ''}`}
                     onClick={() => setActiveFilter(type)}
                   >
                     {type}
