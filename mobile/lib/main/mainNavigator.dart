@@ -1,9 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:mobile/pages/_myReportScreen.dart';
-import 'package:mobile/pages/_socialFeedScreen.dart';
 import 'package:mobile/pages/_homeScreen.dart';
+import 'package:mobile/pages/_myReportScreen.dart';
 import 'package:mobile/pages/_profileScreen.dart';
+import 'package:mobile/pages/_socialFeedScreen.dart';
+import 'package:flutter/material.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class MainNavigator extends StatefulWidget {
   const MainNavigator({super.key});

@@ -1,5 +1,5 @@
+import 'package:mobile/pages/reports/step1_type_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:mobile/pages/report/step1Report.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 import 'alert_card.dart';
 
@@ -80,7 +80,10 @@ class LiveAlertsSheet extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => step1Report()),
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            const ReportHazardStep1TypeScreen(),
+                      ),
                     );
                   },
                   backgroundColor: const Color(0xFFF57C00),
