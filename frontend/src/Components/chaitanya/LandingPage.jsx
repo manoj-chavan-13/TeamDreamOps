@@ -52,7 +52,27 @@ function LandingPage() {
                             <button 
                                 onClick={() => navigate('/login')}
                                 className="text-blue-700 hover:text-blue-900"
-                            ></button>
+                            >
+                             Sign In
+                            </button>
+                    <button
+                                onClick={() => navigate('/dashboard')}
+                                className="text-blue-700 hover:text-blue-900"
+                    >
+                                Dashboard
+                    </button>
+                <button
+                      onClick={() =>  navigate('/socialfeed')}
+                      className="text-blue-700 hover:text-blue-900"
+                      >Social Feed
+                      </button>
+                        </div>
+                        <button className="md:hidden text-gray-500">
+                            ☰
+                        </button>
+                    </div>
+                </div>
+            </header>
 
                 );
             
