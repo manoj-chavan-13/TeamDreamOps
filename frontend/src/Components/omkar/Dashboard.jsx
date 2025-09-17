@@ -1,24 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import axios from 'axios';
-import { FaUserCircle } from 'react-icons/fa';
+import React, { useState } from 'react';
 
-import './Dashboard.css';
-
-const Dashboard = () => {
-    const [userData, setUserData] = useState(null);
-    const navigate = useNavigate();
-    useEffect(() => {
-        const fetchUserData = async () =>{
-            try{
-                const token = localStorage.getItem('token');
-                if(!token){
-                    navigate ('/login');
-                    return;
-                }
-            }
-        }
-    })
-}
-
-
+const TweetCard = ({ tweet }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  
+  const getSeverityColor = (severity) => {
+    switch(severity) {
+      case 'Extreme': return '#e74c3c';
+      case 'High': return '#f39c12';
+      case 'Medium': return '#f1c40f';
+      case 'Low': return '#27ae60';
+      default: return '#95a5a6';
+    }
+  };
+  cons
